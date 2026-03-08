@@ -20,6 +20,7 @@
     "projects_subtitle": "Aqui estão alguns dos projetos que desenvolvi para aplicar e expandir minhas habilidades.",
     "project_1": "FastTech Foods",
     "project_1_desc": "Este foi o projeto final do curso de Pós-Graduação em Arquitetura de Sistemas .NET. O objetivo era construir uma plataforma digital proprietária para FastTech Foods, focando em escalabilidade, observabilidade, segurança e automação. A solução substitui ferramentas de terceiros para modernizar e escalar os serviços de atendimento ao cliente e pedidos.",
+    "project_cs_hero_info": "Desenvolvimento colaborativo de uma plataforma digital proprietária para FastTech Foods, priorizando escalabilidade, observabilidade, segurança e automação.",
     "project_2": "Projeto 2",
     "project_2_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora, explicabo quae quod deserunt eius sapiente praesentium.",
     "project_3": "Projeto 3",
@@ -36,10 +37,12 @@
     "submit": "Enviar",
     "social": "Social",
     "success_message": "Mensagem enviada com sucesso! Obrigado por entrar em contato.",
-    "live_link": "Link ao Vivo",
+    "live_link": "Repositorio Principal",
     "project_overview": "Visão Geral do Projeto",
     "tools_used": "Ferramentas Utilizadas",
-    "footer_desc": "Resolvendo problemas através de sistemas e tecnologias."
+    "footer_desc": "Resolvendo problemas através de sistemas e tecnologias.",
+    "project_overview_para1": "Este projeto foi desenvolvido como trabalho final do curso de Pós-Graduação em Arquitetura de Sistemas .NET. Seu objetivo foi construir uma plataforma digital proprietária para FastTech Foods, focada em escalabilidade, observabilidade, segurança e automação, substituindo ferramentas de terceiros utilizadas para atendimento ao cliente e gestão de pedidos. A arquitetura segue Domain-Driven Design (DDD) e uma abordagem de microsserviços com comunicação assíncrona orientada por eventos.",
+    "project_overview_para2": "Contribuí para o desenvolvimento do microsserviço Catalog API (Write/Admin), responsável por gerenciar o ciclo de vida do produto (criação, atualizações e exclusão). O serviço persiste dados em um banco de dados relacional e publica eventos para RabbitMQ, possibilitando comunicação assíncrona com outros microsserviços do ecossistema."
   },
   "en": {
     "home": "Home",
@@ -62,6 +65,7 @@
     "projects_subtitle": "Here are some of the projects I developed to apply and expand my skills.",
     "project_1": "FastTech Foods",
     "project_1_desc": "This was the final project for the Postgraduate course in .NET Systems Architecture. The goal was to build a proprietary digital platform for FastTech Foods, focusing on scalability, observability, security, and automation. The solution replaces third-party tools to modernize and scale customer service and ordering services.",
+    "project_cs_hero_info": "Collaborative development of a proprietary digital platform for FastTech Foods, prioritizing scalability, observability, security, and automation.",
     "project_2": "Project 2",
     "project_2_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora, explicabo quae quod deserunt eius sapiente praesentium.",
     "project_3": "Project 3",
@@ -78,10 +82,12 @@
     "submit": "Submit",
     "social": "Social",
     "success_message": "Message sent successfully! Thank you for contacting me.",
-    "live_link": "Live Link",
+    "live_link": "Main Repository",
     "project_overview": "Project Overview",
     "tools_used": "Tools Used",
-    "footer_desc": "Solving problems through systems and technologies."
+    "footer_desc": "Solving problems through systems and technologies.",
+    "project_overview_para1": "This project was developed as the final assignment for the Postgraduate course in .NET Systems Architecture. Its objective was to build a proprietary digital platform for FastTech Foods, focused on scalability, observability, security, and automation, replacing third-party tools used for customer service and order management. The architecture follows Domain-Driven Design (DDD) and a microservices approach with asynchronous, event-driven communication.",
+    "project_overview_para2": "I contributed to the development of the Catalog API (Write/Admin) microservice, responsible for managing the product lifecycle (creation, updates, and deletion). The service persists data in a relational database and publishes events to RabbitMQ, enabling asynchronous communication with other microservices in the ecosystem."
   },
   "es": {
     "home": "Inicio",
@@ -103,6 +109,7 @@
     "projects_section": "Proyectos",
     "projects_subtitle": "Aquí hay algunos de los proyectos que desarrollé para aplicar y expandir mis habilidades.",
     "project_1": "FastTech Foods",
+    "project_cs_hero_info": "Desarrollo colaborativo de una plataforma digital propietaria para FastTech Foods, priorizando escalabilidad, observabilidad, seguridad y automatización.",
     "project_1_desc": "Este fue el proyecto final del curso de Postgrado en Arquitectura de Sistemas .NET. El objetivo era construir una plataforma digital propietaria para FastTech Foods, enfocándose en escalabilidad, observabilidad, seguridad y automatización. La solución reemplaza herramientas de terceros para modernizar y escalar los servicios de atención al cliente y pedidos.",
     "project_2": "Proyecto 2",
     "project_2_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora, explicabo quae quod deserunt eius sapiente praesentium.",
@@ -120,9 +127,11 @@
     "submit": "Enviar",
     "social": "Social",
     "success_message": "¡Mensaje enviado exitosamente! Gracias por ponerte en contacto.",
-    "live_link": "Enlace en Vivo",
+    "live_link": "Repositorio Principal",
     "project_overview": "Descripción General del Proyecto",
     "tools_used": "Herramientas Utilizadas",
-    "footer_desc": "Resolviendo problemas a través de sistemas y tecnologías."
+    "footer_desc": "Resolviendo problemas a través de sistemas y tecnologías.",
+    "project_overview_para1": "Este proyecto fue desarrollado como trabajo final del curso de Posgrado en Arquitectura de Sistemas .NET. Su objetivo fue construir una plataforma digital propietaria para FastTech Foods, enfocada en escalabilidad, observabilidad, seguridad y automatización, reemplazando herramientas de terceros utilizadas para atención al cliente y gestión de pedidos. La arquitectura sigue Domain-Driven Design (DDD) y un enfoque de microservicios con comunicación asincrónica orientada por eventos.",
+    "project_overview_para2": "Contribuí al desarrollo del microsservicio Catalog API (Write/Admin), responsable de gestionar el ciclo de vida del producto (creación, actualizaciones y eliminación). El servicio persiste datos en una base de datos relacional y publica eventos a RabbitMQ, permitiendo comunicación asincrónica con otros microservicios del ecosistema."
   }
 }
