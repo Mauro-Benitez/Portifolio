@@ -1,0 +1,94 @@
+/* Estilos para Dropdown de Idiomas no Header */
+.header__language-dropdown {
+  position: relative;
+}
+
+.header__language-btn {
+  padding: 2.2rem 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header__language-btn:hover {
+  color: #112638;
+}
+
+.header__language-btn .arrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s;
+}
+
+.header__language-dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+.header__language-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.header__language-menu.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header__lang-item {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.4rem;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.header__lang-item:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.header__lang-item:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+.header__lang-item:hover {
+  background: #f5f5f5;
+  color: #112638;
+}
+
+.header__lang-item.active {
+  background: #112638;
+  color: #fff;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header__language-btn {
+    padding: 3rem 1.2rem;
+    font-size: 1.5rem;
+  }
+}

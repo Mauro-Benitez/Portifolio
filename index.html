@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dopefolio</title>
+    <meta name="description" content="Portfolio Template for Developer" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/language-switcher.css" />
+    <style>
+      .success-message {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #4caf50;
+        color: white;
+        padding: 16px 24px;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        font-size: 14px;
+        z-index: 9999;
+        animation: slideIn 0.3s ease-in-out, slideOut 0.3s ease-in-out 3.7s;
+      }
+      
+      @keyframes slideIn {
+        from {
+          transform: translateX(400px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      
+      @keyframes slideOut {
+        from {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        to {
+          transform: translateX(400px);
+          opacity: 0;
+        }
+      }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/mauro-benitez.png"
+              alt="Ram Maheshwari Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Mauro Benitez</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link" data-i18n="home"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link" data-i18n="about">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link" data-i18n="projects">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link" data-i18n="contact"> Contact </a>
+            </li>
+            <li class="header__link-wrapper header__language-dropdown">
+              <button class="header__language-btn" onclick="toggleLanguageMenu()" title="Select Language">
+                <span id="currentLang">PT</span>
+                <span class="arrow">▼</span>
+              </button>
+              <div class="header__language-menu" id="languageMenu">
+                <button class="header__lang-item active" data-lang="pt" onclick="changeLanguage('pt'); toggleLanguageMenu()">Português</button>
+                <button class="header__lang-item" data-lang="en" onclick="changeLanguage('en'); toggleLanguageMenu()">English</button>
+                <button class="header__lang-item" data-lang="es" onclick="changeLanguage('es'); toggleLanguageMenu()">Español</button>
+              </div>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="home-hero">
+      <div class="home-hero__content">
+        <h1 class="heading-primary" data-i18n="hero_title">Hey, My name is Mauro Benitez</h1>
+        <div class="home-hero__info">
+          <p class="text-primary" data-i18n="hero_desc">
+            Degree in Systems Analysis and Development and a postgraduate degree in Cloud Systems Architecture from FIAP. I work with the analysis and resolution of issues in backend systems, APIs, and databases, focusing on technical investigation, debugging, and production system reliability.
+          </p>
+        </div>
+        <div class="home-hero__cta">
+          <a href="./#projects" class="btn btn--bg" data-i18n="projects_btn">Projects</a>
+        </div>
+      </div>
+      <div class="home-hero__socials">
+        <div class="home-hero__social">
+          <a href="https://www.linkedin.com/in/mauro-cbenitez/" class="home-hero__social-icon-link" target="_blank" rel="noreferrer">
+            <img
+              src="./assets/png/linkedin-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a
+            href="https://github.com/Mauro-Benitez"
+            class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="./assets/png/github-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="home-hero__mouse-scroll-cont">
+        <div class="mouse"></div>
+      </div>
+    </section>
+    <section id="about" class="about sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main" data-i18n="about_title">About Me</span>
+          <span class="heading-sec__sub" data-i18n="about_subtitle">
+           Degree in Systems Analysis and Development and a postgraduate degree in Cloud Systems Architecture from FIAP. I work with the analysis and resolution of issues in backend systems, APIs, and databases, focusing on technical investigation, debugging, and production system reliability.
+          </span>
+        </h2>
+        <div class="about__content">
+          <div class="about__content-main">
+            <h3 class="about__content-title" data-i18n="get_to_know">Get to know me!</h3>
+            <div class="about__content-details">
+              <p class="about__content-details-para" data-i18n="about_text">
+                I'm a Software Support and Backend-focused professional, working on the investigation and resolution of production issues involving APIs, databases, and backend systems.
+              </p>
+              <p class="about__content-details-para" data-i18n="about_text2">
+                My role involves deep technical analysis such as reviewing logs, debugging SQL procedures and scripts, identifying data inconsistencies, and troubleshooting integration problems between services. I also participate in controlled system changes (GMUD) to ensure stability and reliability in production environments.
+              </p>
+              <p class="about__content-details-para" data-i18n="about_text3">
+                Beyond my daily work, I build personal projects focused on backend development, APIs, and cloud technologies, aiming to strengthen my skills in building scalable and reliable systems.
+              </p>
+              <p class="about__content-details-para" data-i18n="about_text4">
+                I'm particularly interested in Backend Engineering, Cloud Architecture, IA, and Distributed Systems.
+              </p>
+            </div>
+            <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr" data-i18n="contact_btn"
+              >Contact</a
+            >
+          </div>
+          <div class="about__content-skills">
+            <h3 class="about__content-title">Skills</h3>
+            <div class="skills">
+              <div class="skills__skill">Backend Development</div>
+              <div class="skills__skill">REST APIs</div>
+              <div class="skills__skill">SQL & Relational Databases</div>
+              <div class="skills__skill">API Troubleshooting</div>
+              <div class="skills__skill">Debugging & Root Cause Analysis</div>
+              <div class="skills__skill">Log Analysis</div>
+              <div class="skills__skill">Production Support</div>
+              <div class="skills__skill">Change Management (GMUD)</div>
+              <div class="skills__skill">System Monitoring</div>
+              <div class="skills__skill">Cloud Computing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="projects sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-bg">
+          <span class="heading-sec__main" data-i18n="projects_section">Projects</span>
+          <span class="heading-sec__sub" data-i18n="projects_subtitle">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
+            tempora explicabo quae quod deserunt eius sapiente
+          </span>
+        </h2>
+
+        <div class="projects__content">
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/jpeg/FastTechFood.jpg"
+                alt="Arquitetura OAI"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title" data-i18n="project_1">FastTech Foods</h3>
+              <p class="projects__row-content-desc" data-i18n="project_1_desc">
+                This was the final project for the Postgraduate course in .NET Systems Architecture. The goal was build a proprietary digital platform for the FastTech Foods, focusing on scalability, observability, security, and automation. The solution replaces third-party tools to modernize and scale customer service and ordering services.
+              </p>
+              <a
+                href="./project-1.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                data-i18n="case_study"
+                >Case Study</a
+              >
+            </div>
+          </div>
+          <!-- Projeto 2 comentado
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/jpeg/project-mockup-example.jpeg"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title" data-i18n="project_2">Project 2</h3>
+              <p class="projects__row-content-desc" data-i18n="project_2_desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                facilis tempora, explicabo quae quod deserunt eius sapiente
+                praesentium.
+              </p>
+              <a
+                href="./project-2.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                data-i18n="case_study"
+                >Case Study</a
+              >
+            </div>
+          </div>
+          -->
+          <!-- Projeto 3 comentado
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/jpeg/project-mockup-example.jpeg"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title" data-i18n="project_3">Project 3</h3>
+              <p class="projects__row-content-desc" data-i18n="project_3_desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                facilis tempora, explicabo quae quod deserunt eius sapiente
+                praesentium.
+              </p>
+              <a
+                href="./project-3.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                data-i18n="case_study"
+                >Case Study</a
+              >
+            </div>
+          </div>
+          -->
+        </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact sec-pad dynamicBg">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main heading-sec__main--lt" data-i18n="contact_section">Contact</span>
+          <span class="heading-sec__sub heading-sec__sub--lt" data-i18n="contact_subtitle">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
+            tempora explicabo quae quod deserunt eius sapiente
+          </span>
+        </h2>
+        <div class="contact__form-container">
+          <form action="https://formspree.io/f/xnjgndrj" method="POST" class="contact__form">
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="name" data-i18n="name_label">Name</label>
+              <input
+                required
+                data-i18n="name_placeholder"
+                data-i18n-placeholder
+                placeholder="Enter Your Name"
+                type="text"
+                class="contact__form-input"
+                name="name"
+                id="name"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email" data-i18n="email_label">Email</label>
+              <input
+                required
+                data-i18n="email_placeholder"
+                data-i18n-placeholder
+                placeholder="Enter Your Email"
+                type="email"
+                class="contact__form-input"
+                name="email"
+                id="email"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="message" data-i18n="message_label">Message</label>
+              <textarea
+                required
+                cols="30"
+                rows="10"
+                class="contact__form-input"
+                data-i18n="message_placeholder"
+                data-i18n-placeholder
+                placeholder="Enter Your Message"
+                name="message"
+                id="message"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn--theme contact__btn" data-i18n="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span data-i18n="social">Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mauro-cbenitez/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/Mauro-Benitez">
+                <img
+                  class="main-footer__icon main-footer__icon--mr-none"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Mauro Benitez</h4>
+            <p class="main-footer__short-desc" data-i18n="footer_desc">
+              Solving problems through systems and technologies.
+            </p>
+          </div>
+        </div>
+
+        <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
+        <div class="main-footer__lower">
+          &copy; Copyright 2026. Made by
+          <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/mauro-cbenitez/"
+            >Mauro Benitez</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="./translation.js"></script>
+    <script src="./index.js"></script>
+    <script>
+      function toggleLanguageMenu() {
+        const menu = document.getElementById('languageMenu');
+        menu.classList.toggle('active');
+      }
+      
+      document.addEventListener('click', function(e) {
+        const dropdown = document.querySelector('.header__language-dropdown');
+        if (!dropdown.contains(e.target)) {
+          document.getElementById('languageMenu').classList.remove('active');
+        }
+      });
+
+      // Limpar formulário e mostrar mensagem de sucesso
+      document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.querySelector('.contact__form');
+        if (contactForm) {
+          contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Previne submissão tradicional
+            
+            const formData = new FormData(contactForm);
+            
+            // Submete para Formspree via AJAX
+            fetch(contactForm.action, {
+              method: 'POST',
+              body: formData,
+              headers: {
+                'Accept': 'application/json'
+              }
+            }).then(response => {
+              if (response.ok) {
+                contactForm.reset(); // Limpa o formulário imediatamente
+                
+                // Obter o idioma atual e mostrar mensagem de sucesso
+                const currentLang = localStorage.getItem('selectedLanguage') || 'pt';
+                const translations = window.translations || {};
+                const successMsg = translations[currentLang]?.success_message || translations['pt']?.success_message || 'Mensagem enviada com sucesso!';
+                
+                // Criar e exibir a notificação
+                const successNotification = document.createElement('div');
+                successNotification.className = 'success-message';
+                successNotification.textContent = successMsg;
+                document.body.appendChild(successNotification);
+                
+                // Remover a notificação após 4 segundos
+                setTimeout(() => {
+                  successNotification.remove();
+                }, 4000);
+              }
+            }).catch(error => {
+              console.error('Error:', error);
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
